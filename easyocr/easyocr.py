@@ -57,7 +57,7 @@ class Reader(object):
         self.model_storage_directory = MODULE_PATH + '/model'
         if model_storage_directory:
             self.model_storage_directory = model_storage_directory
-        Path(self.model_storage_directory).mkdir(parents=True, exist_ok=True)
+        Path(self.model_storage_directory).mkdir(parents=True, exist_ok=True)  #if the directory exist won't create it twice!
 
         self.user_network_directory = MODULE_PATH + '/user_network'
         if user_network_directory:
