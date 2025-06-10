@@ -62,6 +62,7 @@ class Reader(object):
         self.user_network_directory = MODULE_PATH + '/user_network'
         if user_network_directory:
             self.user_network_directory = user_network_directory
+        print(f"user_network_directory: {self.user_network_directory}")
         Path(self.user_network_directory).mkdir(parents=True, exist_ok=True)
         sys.path.append(self.user_network_directory)
 
